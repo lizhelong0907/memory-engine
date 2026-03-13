@@ -2,7 +2,7 @@
  "id": "memory-engine",
  "kind": "memory",
  "name": "memory-engine",
- "version": "2.0.0",
+ "version": "3.0.0",
  "displayName": "Memory Engine V2",
  "description": "Context management plugin using Context Engine API",
  "author": "",

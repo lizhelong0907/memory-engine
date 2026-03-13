@@ -1,6 +1,6 @@
 {
   "name": "memory-engine-v2",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "OpenClaw 3.8+ 智能上下文管理与记忆系统插件",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,7 +22,7 @@
     "dev": "tsc --watch",
     "clean": "rmdir /s /q dist",
     "deploy": "npm run build && npm run copy-deps && npm run copy-manifest",
-    "copy-deps": "xcopy /E /I /Y node_modules\\better-sqlite3 dist\\node_modules\\better-sqlite3 2>nul || echo \"better-sqlite3 may not be needed\"",
+    "copy-deps": "xcopy /E /I /Y node_modules\\better-sqlite3 dist\\node_modules\\better-sqlite3 2>nul & xcopy /E /I /Y node_modules\\bindings dist\\node_modules\\bindings 2>nul & xcopy /E /I /Y node_modules\\onnxruntime-node dist\\node_modules\\onnxruntime-node 2>nul",
     "copy-manifest": "copy /Y openclaw.plugin.json dist\\openclaw.plugin.json && copy /Y package.json dist\\package.json"
   },
   "keywords": [
